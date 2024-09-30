@@ -17,17 +17,18 @@
             eliminarPermisos($cuidador);
             //echo "se eliminan permisos cuidador";
             //var_dump($cuidador);
-            $animal = getANIMAL();
-            //$animales = gettodosANIMALES();
+            //$animales = getANIMAL();
+            //$animal =getANIMALPORID ($id)
+            $animales = gettodosANIMALES();
             //var_dump($animales);
 
-            foreach ($animal as $animal):
-                if (isset($_POST['animal'.$animal[0]]))
-                    echo "--se ha marcado el animal con id: ".$animal[0];
+            foreach ($animales as $amimal):
+                if (isset($_POST['animal'.$amimal[0]]))
+                    echo "--se ha marcado el animal con id: ".$amimal[0];
                     //asignarPermisos ($cuidador, $animal[0]);
                     echo "---asigna categoria";
             endforeach;
-           var_dump($animal[0]);
+          // var_dump($animal[0]);
 
            //header('Location: ../Super/editarPermisos.php');
         //  if (isset($_POST['email'])) {

@@ -11,9 +11,9 @@ conectar();
    //$cuidador = $_GET['animales'];
   //else  header('Location: index.html');
 
-  $animal = getANIMAL()
+  //$animal = getANIMAL()
   //$cuidador = getnombrecuidador ();
-  //$animales = gettodosANIMALES ()
+  $animales = gettodosANIMALES ()
   //$cuidador = getCuidador();
   //$cuidador = getCuidador2();
   
@@ -44,11 +44,11 @@ conectar();
           <tbody>
           <?php 
           $i =1;
-          foreach ($animal as $animal ):  ?>
+          foreach ($animales as $animal ):  ?>
             <tr>
               <td><?php echo $i++; ?></td>
-              <td><?php echo $animal [1] ?></td>
-              <td><a href ="Super/permisos.php?cuidador=<?= $animal [0] ?>"><a href ="Super/editarPermisos.php?cuidador=<?= $animal [0] ?>">ver info</a></a></td>
+              <td><?php echo $animal[1] ?></td>
+              <td><a href ="../Super/permisos.php?cuidador=<?= $animal [0] ?>"><a href ="../Super/editarPermisos.php?cuidador=<?= $animal [0] ?>">ver info</a></a></td>
            </tr>
            <?php endforeach ?>
 

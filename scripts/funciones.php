@@ -71,16 +71,25 @@
     function gettodosANIMALES ()
     {
         global $conexion;
-        $respuesta = mysqli_query ($conexion, " SELECT * FROM ANIMALES");
+        $respuesta = mysqli_query ($conexion, " SELECT * FROM ANIMALES ");
         echo "---funcion todosAnimales";
         return $respuesta->fetch_all();
         
     }
-    // function getANIMAL ()
-    // {
+    // function getAnimalPorId($id) {
     //     global $conexion;
-    //     $respuesta = mysqli_query ($conexion, " SELECT * FROM ANIMALES ");
-    //     return $respuesta->fetch_all();
+    //     $respuesta = mysqli_query($conexion, "SELECT * FROM ANIMALES WHERE idAnimal = $id");
+        
+    //     if ($respuesta) {
+    //         $animal = $respuesta->fetch_assoc();
+    //         if ($animal) {
+    //             return $animal; // Devuelve el animal marcado
+    //         } else {
+    //             return "No se encontró el animal con el ID especificado.";
+    //         }
+    //     } else {
+    //         return "Error en la consulta: " . mysqli_error($conexion);
+    //     }
     // }
      function getANIMAL ()
      {
