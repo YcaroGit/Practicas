@@ -14,18 +14,22 @@
             conectar();
             
             
-            //eliminarPermisos($cuidador);
+            eliminarPermisos($cuidador);
             //echo "se eliminan permisos cuidador";
             //var_dump($cuidador);
-            //$animal = getANIMAL();
-            $animales = gettodosANIMALES();
+            $animal = getANIMAL();
+            //$animales = gettodosANIMALES();
             //var_dump($animales);
 
-            foreach ($animales as $animal):
+            foreach ($animal as $animal):
                 if (isset($_POST['animal'.$animal[0]]))
                     echo "--se ha marcado el animal con id: ".$animal[0];
+                    //asignarPermisos ($cuidador, $animal[0]);
+                    echo "---asigna categoria";
             endforeach;
-           
+           var_dump($animal[0]);
+
+           //header('Location: ../Super/editarPermisos.php');
         //  if (isset($_POST['email'])) {
         //   $email = $_POST['email'];
          // } else {
@@ -33,7 +37,7 @@
          //    exit; } // PARA PODER VER Y SEGUIR 
                       
            
-            //asignarPermisos ($cuidador);
+            // ($cuidador);
             //var_dump($cuidador);
 
             //$animales = $_POST['animales'];
@@ -42,7 +46,7 @@
                // if (isset($_POST[$animal])) {
                //     echo "Se ha marcado el animal con id: ".$animal[0];
               //  }
-            //asignarPermisos($gettodosANIMALES, $gettodosANIMALES[0]);
+            
             //endforeach;
             desconectar();
     ?>

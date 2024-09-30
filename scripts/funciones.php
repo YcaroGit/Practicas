@@ -76,12 +76,25 @@
         return $respuesta->fetch_all();
         
     }
-    function getANIMAL ()
-    {
-        global $conexion;
-        $respuesta = mysqli_query ($conexion, " SELECT * FROM ANIMALES ");
-        return $respuesta->fetch_all();
-    }
+    // function getANIMAL ()
+    // {
+    //     global $conexion;
+    //     $respuesta = mysqli_query ($conexion, " SELECT * FROM ANIMALES ");
+    //     return $respuesta->fetch_all();
+    // }
+     function getANIMAL ()
+     {
+         global $conexion;
+         $respuesta = mysqli_query ($conexion, "SELECT * FROM ANIMALES WHERE idAnimal<>0");
+         return $respuesta->fetch_all();
+     }
+
+    // //para mirar
+    // function getCuidador ()
+    //     global $conexion;
+    //     //session_start();
+    //     $respuesta = mysqli_query ($conexion, "SELECT * FROM CUIDADOR WHERE Super<>1");
+    //     return $respuesta->fetch_all();
 
     function getANIMALES ()
     {
@@ -95,18 +108,27 @@
        
         global $conexion;
         //session_start();
-        $respuesta = mysqli_query($conexion, "DELETE FROM CUIDADOR WHERE email='".$cuidador."'");
-        //echo "ha eliminado permisos";
+        $respuesta = mysqli_query($conexion, "DELETE FROM ASIGNACION WHERE email='".$cuidador."'");
+        echo "ha eliminado permisos";
     }
 
-    function asignarPermisos ($cuidador)
+    function asignarPermisos ($cuidador, $animal)
     {
         global $conexion;
         //session_start();
-        
-        $respuesta = mysqli_query($conexion, "SELECT * from ANIMALES") ;
+        $respuesta = mysqli_query($conexion, "INSERT INTO ASIGNACION VALUES ('".$cuidador."', ".$animales.")" ) ;
         echo "--SE ASIGNAN LOS PERMISOS";
-        return $respuesta->fetch_all();
+        //return $respuesta->fetch_all();
+        
+    }
+
+    function tienePermiso ($cuidador, $animal)
+    {
+        global $conexion;
+        //session_start();
+        $respuesta = mysqli_query($conexion, "INSERT INTO ASIGNACION VALUES ('".$cuidador."', ".$animal.")" ) ;
+        echo "--SE ASIGNAN LOS PERMISOS";
+        //return $respuesta->fetch_all();
         
     }
 
