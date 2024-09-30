@@ -12,18 +12,19 @@
                 header('Location: index.html');
             
             conectar();
-            var_dump($cuidador);
-            eliminarPermisos($cuidador);
-            //echo "se eliminan permisos cuidador";
             
-            $animales = gettodosANIMALES ();
-            var_dump($animales);
+            
+            //eliminarPermisos($cuidador);
+            //echo "se eliminan permisos cuidador";
+            //var_dump($cuidador);
+            //$animal = getANIMAL();
+            $animales = gettodosANIMALES();
+            //var_dump($animales);
 
-                 foreach ($animales as $animal):
-                    if (isset($_POST['animales[]'.$animal[0]]));
-                    echo "--se ha marcado el animal con id: " .$animal[0];
-                
-                 endforeach;
+            foreach ($animales as $animal):
+                if (isset($_POST['animal'.$animal[0]]))
+                    echo "--se ha marcado el animal con id: ".$animal[0];
+            endforeach;
            
         //  if (isset($_POST['email'])) {
         //   $email = $_POST['email'];
@@ -32,8 +33,8 @@
          //    exit; } // PARA PODER VER Y SEGUIR 
                       
            
-            asignarPermisos ($cuidador);
-            var_dump($cuidador);
+            //asignarPermisos ($cuidador);
+            //var_dump($cuidador);
 
             //$animales = $_POST['animales'];
             //echo "Se ha marcado el animal ".$animales;

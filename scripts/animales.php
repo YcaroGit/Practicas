@@ -21,10 +21,10 @@ conectar();
 
   //desconectar()
 ?>
-<?php include 'cuerpo.php';  ?>
+<?php include '../super/cuerpo.php';  ?>
 <link href="../css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
-<?php include 'menu-izq.php';  ?>
-<?php include 'menu-superior.php';  ?>
+<?php include '../super/menu-izq.php';  ?>
+<?php include '../super/menu-superior.php';  ?>
 
 <a href ="../Admin.php"?>
 <button type="button" class="btn btn-sm btn-outline-secondary"  >ATRAS</button></a>

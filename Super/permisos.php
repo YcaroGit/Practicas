@@ -14,6 +14,7 @@ if (! haIniciadoSesion() || ! esSuper() )
   conectar();
   $cuidador = getnombrecuidador ();
   $gettodosANIMALES = gettodosANIMALES ()
+  $animal = getANIMAL()
   //$cuidador = getCuidador();
   //$cuidador = getCuidador2();
   

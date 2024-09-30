@@ -103,7 +103,10 @@
     {
         global $conexion;
         //session_start();
-        $respuesta = mysqli_query($conexion, "SELECT * from CUIDADOR") ;
+        
+        $respuesta = mysqli_query($conexion, "SELECT * from ANIMALES") ;
+        echo "--SE ASIGNAN LOS PERMISOS";
+        return $respuesta->fetch_all();
         
     }
 

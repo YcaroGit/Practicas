@@ -15,7 +15,8 @@ else { header('Location: ../Admin.php');
 
 
 conectar();
-$gettodosANIMALES = gettodosANIMALES();
+$animales = gettodosANIMALES();
+//$animal = getANIMAL();
 //$gettodosANIMALES = gettodosANIMALES ();
 //$cuidador = getCuidador();
 
@@ -34,7 +35,27 @@ desconectar();
      <div class="panel panel-default">
       <!--<div class="panel-heading"><h3 class="panel-title">Permisos</h3></div> -->
       <div class="panel-body">
-        <?php include '../scripts/form.php';?>
+      <form action="../scripts/actualizarPermisos.php" method="POST">
+              <div class="mb-2 form-check">
+                <!--<label for="txtEmail">Cuidador</label>-->
+                <input type="text"  name="txtEmail" id="txtEmail" value="<?= $_GET['cuidador']?>">
+              </div>  
+
+<?php foreach ($animales as $animal): ?>
+              <div class="checkbox"> 
+                    <label>
+                      <input type="checkbox" name="animal<?= $animal[0]?>" ><?=$animal[1] ?>
+                    </label>
+                 </div>  
+<?php endforeach ?>
+              </div>  
+              </div>
+    
+              <div class="mb-3 form-check">
+              <button type="submit" class="btn btn-primary">CONFIRMA</button></div>
+            </form>
+
+        <!--?php include '../scripts/form.php';?>-->
         <!--?php include '../scripts/email.php';?-->
 
       </div>

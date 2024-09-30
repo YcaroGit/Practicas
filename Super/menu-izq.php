@@ -16,7 +16,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap -2" href="#">
-                <svg class="bi"><use xlink:href="#file-earmark"/></svg><td><a href ="Super/animales.php"> Animales</a></a></td>
+                <svg class="bi"><use xlink:href="#file-earmark"/></svg><td><a href ="scripts/animales.php"> Animales</a></a></td>
                       
               </a>
             </li>
