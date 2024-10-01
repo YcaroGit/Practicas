@@ -44,7 +44,7 @@ desconectar();
 <?php foreach ($animales as $animal): ?>
               <div class="checkbox"> 
                     <label>
-                      <input type="checkbox" name="animal<?= $animal[0]?>" ><?=$animal[1] ?>
+                      <input type="checkbox" name="animal<?= $animal[0] ?>"> <?=$animal[1] ?>
                     </label>
                  </div>  
 <?php endforeach ?>

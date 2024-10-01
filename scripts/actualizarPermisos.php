@@ -15,19 +15,24 @@
             
             
             eliminarPermisos($cuidador);
+            //eliminarPermisosTODOS($cuidador);//Borrar al conseguirlo.////////////////////duplicidad por numero de animales.
             //echo "se eliminan permisos cuidador";
             //var_dump($cuidador);
-            //$animales = getANIMAL();
-            //$animal =getANIMALPORID ($id)
+           
+            //$animales =getANIMALPORID ($animal)
             $animales = gettodosANIMALES();
+            //$animales = getANIMALES();
+            //$animales = getANIMAL();
+            //$animales =getANIMALESPorUser ();
             //var_dump($animales);
-
-            foreach ($animales as $amimal):
-                if (isset($_POST['animal'.$amimal[0]]))
-                    echo "--se ha marcado el animal con id: ".$amimal[0];
-                    //asignarPermisos ($cuidador, $animal[0]);
-                    echo "---asigna categoria";
-            endforeach;
+            foreach ($animales as $animal){
+                if (isset($_POST['animal'.$animal[0]])){
+                    echo "--se ha marcado el animal con id: ".$animal[0];//nos indica el numero o nombre
+                    asignarPermisos ($cuidador, $animal[0]);
+                   echo "---asigna categoria";
+                }
+            }
+            //endforeach;
           // var_dump($animal[0]);
 
            //header('Location: ../Super/editarPermisos.php');

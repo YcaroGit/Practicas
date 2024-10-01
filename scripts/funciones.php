@@ -76,25 +76,27 @@
         return $respuesta->fetch_all();
         
     }
-    // function getAnimalPorId($id) {
-    //     global $conexion;
-    //     $respuesta = mysqli_query($conexion, "SELECT * FROM ANIMALES WHERE idAnimal = $id");
+     function getAnimalPorId($animal) {
+         global $conexion;
+         $respuesta = mysqli_query($conexion, "SELECT * FROM ANIMALES WHERE idAnimal = $animal");
         
-    //     if ($respuesta) {
-    //         $animal = $respuesta->fetch_assoc();
-    //         if ($animal) {
-    //             return $animal; // Devuelve el animal marcado
-    //         } else {
-    //             return "No se encontró el animal con el ID especificado.";
-    //         }
-    //     } else {
-    //         return "Error en la consulta: " . mysqli_error($conexion);
-    //     }
-    // }
+         if ($respuesta) {
+            $animal = $respuesta->fetch_assoc();
+             if ($animal) {
+                 return $animal; // Devuelve el animal marcado
+             } else {
+                return "No se encontró el animal con el ID .";
+             }
+         } else {
+             return "Error en la consulta: " . mysqli_error($conexion);
+         }
+         }
+
+
      function getANIMAL ()
      {
          global $conexion;
-         $respuesta = mysqli_query ($conexion, "SELECT * FROM ANIMALES WHERE idAnimal<>0");
+         $respuesta = mysqli_query ($conexion, " SELECT * FROM ASIGNACION  ");
          return $respuesta->fetch_all();
      }
 
@@ -117,7 +119,15 @@
        
         global $conexion;
         //session_start();
-        $respuesta = mysqli_query($conexion, "DELETE FROM ASIGNACION WHERE email='".$cuidador."'");
+        mysqli_query($conexion, "DELETE FROM ASIGNACION WHERE email='".$cuidador."'");
+        echo "ha eliminado permisos";
+    }
+    function eliminarPermisosTODOS($cuidador)
+    {
+       
+        global $conexion;
+        //session_start();
+        $respuesta = mysqli_query($conexion, "DELETE FROM ASIGNACION ");
         echo "ha eliminado permisos";
     }
 
@@ -125,7 +135,7 @@
     {
         global $conexion;
         //session_start();
-        $respuesta = mysqli_query($conexion, "INSERT INTO ASIGNACION VALUES ('".$cuidador."', ".$animales.")" ) ;
+        $respuesta = mysqli_query($conexion, "INSERT INTO ASIGNACION (email, idAnimal) VALUES ('$cuidador',".$animal.")" ) ;
         echo "--SE ASIGNAN LOS PERMISOS";
         //return $respuesta->fetch_all();
         
