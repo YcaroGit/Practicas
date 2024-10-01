@@ -20,7 +20,7 @@ $animales = gettodosANIMALES();
 //$gettodosANIMALES = gettodosANIMALES ();
 //$cuidador = getCuidador();
 
-desconectar();
+//desconectar();
 ?>
     <?php include 'cuerpo.php';  ?>
     <link href="../css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -38,16 +38,19 @@ desconectar();
       <form action="../scripts/actualizarPermisos.php" method="POST">
               <div class="mb-2 form-check">
                 <!--<label for="txtEmail">Cuidador</label>-->
-                <input type="text"  name="txtEmail" id="txtEmail" value="<?= $_GET['cuidador']?>">
+                <input type="text"  name="txtEmail" id="txtEmail" value="<?= $cuidador?>">
               </div>  
 
 <?php foreach ($animales as $animal): ?>
               <div class="checkbox"> 
                     <label>
-                      <input type="checkbox" name="animal<?= $animal[0] ?>"> <?=$animal[1] ?>
+                      <input type="checkbox" name="animal<?= $animal[0] ?>" <?= tienePermiso ($cuidador, $animal[0] ) ? 'checked' : ''    ?> > <?=$animal[1] ?>
                     </label>
                  </div>  
-<?php endforeach ?>
+<?php endforeach 
+  //desconectar();
+  ?>
+ 
               </div>  
               </div>
     

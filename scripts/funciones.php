@@ -145,12 +145,15 @@
     {
         global $conexion;
         //session_start();
-        $respuesta = mysqli_query($conexion, "INSERT INTO ASIGNACION VALUES ('".$cuidador."', ".$animal.")" ) ;
-        echo "--SE ASIGNAN LOS PERMISOS";
-        //return $respuesta->fetch_all();
-        
-    }
-
+        $respuesta =mysqli_query($conexion, "SELECT 1 FROM ASIGNACION WHERE email='".$cuidador."' AND idAnimal='".$animal."'") ;
+        if ($fila = mysqli_fetch_row($respuesta))
+        {
+        return true;
+        }
+    return false;
+     }   
+   
+ 
 
     function validarLogin ($email, $clave)
     {
