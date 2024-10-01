@@ -24,6 +24,14 @@
             
             return $respuesta->fetch_all();
     }
+    function getANIMALESPorid ()
+    {
+        global $conexion;
+        //session_start();
+        $respuesta = mysqli_query ($conexion, "SELECT nombre, fechaNacimiento, genero FROM ANIMALES");
+        
+        return $respuesta->fetch_all();
+}
 
     function getCuidador ()
     {
@@ -72,7 +80,7 @@
     {
         global $conexion;
         $respuesta = mysqli_query ($conexion, " SELECT * FROM ANIMALES ");
-        echo "---funcion todosAnimales";
+        //echo "---funcion todosAnimales";
         return $respuesta->fetch_all();
         
     }

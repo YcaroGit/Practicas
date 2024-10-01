@@ -25,8 +25,10 @@ $animales = gettodosANIMALES();
     <?php include 'cuerpo.php';  ?>
     <link href="../css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
    
-    <?php include 'menu-izq.php';  ?>
+    <!-- <?php include 'menu-izq.php';  ?> -->
  <?php include 'menu-superior.php';  ?>
+ <a href ="../Admin.php"?>
+ <button type="button" class="btn btn-sm btn-outline-secondary"  >ATRAS</button></a>
 <!--   <?= $cuidador?>  -->
  <h1>Bienvenido  </h1>
     <h2>Vas a EDITAR los permisos de :  </h2>

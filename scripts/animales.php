@@ -15,7 +15,7 @@ conectar();
   //$cuidador = getnombrecuidador ();
   $animales = gettodosANIMALES ()
   //$cuidador = getCuidador();
-  //$cuidador = getCuidador2();
+  //$cuidador = getCuidador2();}
   
 //$_GET['cuidador'] = getnombrecuidador();
 
@@ -23,7 +23,7 @@ conectar();
 ?>
 <?php include '../super/cuerpo.php';  ?>
 <link href="../css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
-<?php include '../super/menu-izq.php';  ?>
+<!-- <?php include '../super/menu-izq.php';  ?> -->
 <?php include '../super/menu-superior.php';  ?>
 
 <a href ="../Admin.php"?>
@@ -48,7 +48,8 @@ conectar();
             <tr>
               <td><?php echo $i++; ?></td>
               <td><?php echo $animal[1] ?></td>
-              <td><a href ="../Super/permisos.php?cuidador=<?= $animal [0] ?>"><a href ="../Super/editarPermisos.php?cuidador=<?= $animal [0] ?>">ver info</a></a></td>
+              <td><a href ="../super/editarAnimales.php?animal=<?= $animal [0] ?>"><a href ="../super/editarAnimales.php?animal=<?= $animal [1] ?>">ver info</a></a></td>
+              
            </tr>
            <?php endforeach ?>
 

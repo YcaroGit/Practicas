@@ -22,7 +22,7 @@ desconectar();
 
 <?php include 'Super/menu-superior.php';  ?>
           
-
+      <h1 class="h1">SELECCIONA ANIMALES O PERSONAS.</h1>
       <h2>Seleccion</h2>
       <div class="table-responsive small">
         <table class="table table-striped table-sm">
