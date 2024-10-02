@@ -8,7 +8,7 @@ if (! haIniciadoSesion() || ! esSuper() )
 }
 
 if(isset($_GET['animal']))
- $cuidador = $_GET['animal'];
+ $nombreAnimal = $_GET['animal'];
 else { header('Location: ../Admin.php');
  }
 
@@ -37,23 +37,23 @@ $animal =getANIMALESPorid ()
       <div class="panel-body">
 
       <form action="../scripts/actualizar-animal.php" method="POST">
-      <input type="text"  name="txtEmail" id="txtEmail" value="<?= $animal?>">
+      <input type="text"  name="txtEmail" id="txtEmail" value="<?= $nombreAnimal?>">
 
       <div class="form-group">
                 <label for="txtId">Id Animal</label>  
-                <input type="number" class="form-control" id="txtId" name="txtId" value="<?= $animal[0]?>">
+                <input type="text" class="form-control" id="txtId" name="txtId" value="<?= $animal?>">
               </div>
               <div class="form-group">
                 <label for="txtId">Nombre</label>  
-                <input type="number" class="form-control" id="txtNombre" name="txtNombre" value="<?= $animal[1]?>">
+                <input type="text" class="form-control" id="txtNombre" name="txtNombre" value="<?= $animal[1]?>">
               </div>
               <div class="form-group">
                 <label for="txtId">fechaNacimiento</label>  
-                <input type="number" class="form-control" id="txtFecha" name="txtFecha" value="<?= $animal[2]?>">
+                <input type="text" class="form-control" id="txtFecha" name="txtFecha" value="<?= $animal[2]?>">
               </div>
               <div class="form-group">
                 <label for="txtId">genero</label>  
-                <input type="number" class="form-control" id="txtGenero" name="txtGenero" value="<?= $animal[3]?>">
+                <input type="text" class="form-control" id="txtGenero" name="txtGenero" value="<?= $animal[3]?>">
               </div>
               
             
@@ -62,11 +62,11 @@ $animal =getANIMALESPorid ()
                 <!-- <input type="number"  name="txtId" id="txtId" value="<?= $animales?>">
               </div>   -->
 
-       <!-- <?php foreach ($animales as $fila):?>
+       <?php foreach ($animal as $fila):?>
         <td><?php echo $fila [1] ?></td>    
          <h2><a href="ANIMALES<?=  $fila[1] ?>"<?=  $fila[2] ?>></a ></h2>
           <p class="col-md-8 fs-4"> <?php echo  $fila [0]?></p>
-       <?php  endforeach ?> -->
+       <?php  endforeach ?>
 
 <!-- <?php foreach ($animales as $animal): ?>
               <div class="checkbox"> 

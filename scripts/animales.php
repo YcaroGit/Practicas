@@ -48,7 +48,7 @@ conectar();
             <tr>
               <td><?php echo $i++; ?></td>
               <td><?php echo $animal[1] ?></td>
-              <td><a href ="../super/editarAnimales.php?animal=<?= $animal [0] ?>"><a href ="../super/editarAnimales.php?animal=<?= $animal [0] ?>">ver info</a></a></td>
+              <td><a href ="../super/animales.php?animal=<?= $animal [0] ?>"><a href ="../super/editarAnimales.php?animal=<?= $animal [0] ?>">ver info</a></a></td>
               
            </tr>
            <?php endforeach ?>
