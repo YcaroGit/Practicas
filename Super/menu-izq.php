@@ -10,8 +10,7 @@
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
-                <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                Dashbo
+                <svg class="bi"><use xlink:href="#house-fill"/></svg>PENDIENTE
               </a>
             </li>
             <li class="nav-item">
@@ -28,7 +27,7 @@
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
-                Settings
+                PENDIENTE 2
               </a>
             </li>
             <li class="nav-item">

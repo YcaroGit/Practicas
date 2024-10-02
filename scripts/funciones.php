@@ -33,6 +33,15 @@
         return $respuesta->fetch_all();
 }
 
+    function editarAnimal ($id, $nombre, $fecha, $genero)
+            {
+            global $conexion;
+           mysqli_query ($conexion, "UPDATE ANIMALES  SET nombre='".$nombre."', fechaNacimiento='".$fecha."', genero='".$genero."' WHERE ID_ANIMAL =".$id);
+            return $respuesta->fetch_all();
+            }
+
+
+
     function getCuidador ()
     {
         global $conexion;
