@@ -25,19 +25,19 @@
             return $respuesta->fetch_all();
     }
     function getANIMALESPorid ()
-    {
+        {
         global $conexion;
         //session_start();
-        $respuesta = mysqli_query ($conexion, "SELECT nombre, fechaNacimiento, genero FROM ANIMALES");
+        $respuesta = mysqli_query ($conexion, "SELECT idAnimal, nombre, fechaNacimiento, genero FROM ANIMALES");
         
         return $respuesta->fetch_all();
-}
+    }
 
-    function editarAnimal ($id, $nombre, $fecha, $genero)
+    function editarAnimal($id, $nombre, $fecha, $genero)
             {
             global $conexion;
-           mysqli_query ($conexion, "UPDATE ANIMALES  SET nombre='".$nombre."', fechaNacimiento='".$fecha."', genero='".$genero."' WHERE ID_ANIMAL =".$id);
-            return $respuesta->fetch_all();
+           mysqli_query($conexion, "UPDATE ANIMALES  SET nombre='".$nombre."', fechaNacimiento='".$fecha."', genero='".$genero."' WHERE idAnimal =".$id);
+            // return $respuesta->fetch_all();
             }
 
 

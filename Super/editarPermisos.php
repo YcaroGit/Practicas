@@ -39,7 +39,7 @@ $animales = gettodosANIMALES();
       <div class="panel-body">
       <form action="../scripts/actualizarPermisos.php" method="POST">
               <div class="mb-2 form-check">
-                <!--<label for="txtEmail">Cuidador</label>-->
+                <!--<label for="txtEmail">Cuidadors</label>-->
                 <input type="text"  name="txtEmail" id="txtEmail" value="<?= $cuidador?>">
               </div>  
 
@@ -49,9 +49,9 @@ $animales = gettodosANIMALES();
                       <input type="checkbox" name="animal<?= $animal[0] ?>" <?= tienePermiso ($cuidador, $animal[0] ) ? 'checked' : ''    ?> > <?=$animal[1] ?>
                     </label>
                  </div>  
-<?php endforeach 
+<?php endforeach ?>
   //desconectar();
-  ?>
+  
  
               </div>  
               </div>

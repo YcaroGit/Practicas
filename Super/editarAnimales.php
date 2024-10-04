@@ -8,17 +8,26 @@ if (! haIniciadoSesion() || ! esSuper() )
 }
 
 if(isset($_GET['animal']))
- $nombreAnimal = $_GET['animal'];
+$nombreAnimal = $_GET['animal'];
 else { header('Location: ../Admin.php');
- }
+}
+
+ 
+// if(isset($_GET['txtId']))
+//   $id = $_GET['txtId'];
+// // else { header('Location: ../Admin.php');
+// //  }
 
 
 conectar();
-$animal =getANIMALESPorid ()
-//$animal = gettodosANIMALES();
-//$animal = getANIMAL();
+$animales =getANIMALESPorid ();
+//$animales =editarAnimal($id, $nombre, $fecha, $genero) ;
+//$animales = gettodosANIMALES();
+$animal = getANIMAL();
 //$gettodosANIMALES = gettodosANIMALES ();
 //$cuidador = getCuidador();
+
+
 
 //desconectar();
 ?>
@@ -38,14 +47,17 @@ $animal =getANIMALESPorid ()
 
       <form action="../scripts/actualizar-animal.php" method="POST">
       <input type="text"  name="txtEmail" id="txtEmail" value="<?= $nombreAnimal?>">
+     
 
       <div class="form-group">
                 <label for="txtId">Id Animal</label>  
                 <input type="text"  id="txtId" name="txtId" value="<?= $nombreAnimal?>">
+                 <? var_dump ($animales)?>
               </div>
               <div class="form-group">
                 <label for="txtId">Nombre</label>  
-                <input type="text"  id="txtNombre" name="txtNombre" value="<?= $nombreAnimal?>">
+                <!-- envia los datos como $nombre , pero no los recupera -->
+                <input type="text"  id="txtNombre" name="txtNombre" value="<?= $animales[3] ?>">
               </div>
               <div class="form-group">
                 <label for="txtId">fechaNacimiento</label>  
@@ -53,30 +65,23 @@ $animal =getANIMALESPorid ()
               </div>
               <div class="form-group">
                 <label for="txtId">genero</label>  
-                <input type="text" class="form-control" id="txtGenero" name="txtGenero" value="<?= $nombreAnimal?>">
+                <input type="text"  id="txtGenero" name="txtGenero" value="<?= $nombreAnimal?>">
               </div>
-              
+                         
             
-              <!-- <div class="mb-2 form-check">
+              <!-- <div class="mb-2 form-chesck">
                 <label for="txtEmail">Cuidador</label>-->
                 <!-- <input type="number"  name="txtId" id="txtId" value="<?= $animales?>">
               </div>   -->
 
-       <?php foreach ($animal as $fila):?>
-        <!-- <td><?php echo $fila [0] ?></td>     -->
-         <h2><a href="ANIMAL<?=  $fila[0] ?>"<?=  $fila[1] ?>></a ></h2>
-          <!-- <p class="col-md-8 fs-4"> <?php echo  $fila [0]?></p> -->
-       <?php  endforeach ?>
 
-<!-- <?php foreach ($animales as $animal): ?>
-              <div class="checkbox"> 
-                    <label>
-                      <input type="checkbox"   <?=$animal[0] ?>
-                    </label>
-                 </div>  
-    <?php endforeach
-  //desconectar();
-  ?> -->
+            <!-- <?php foreach ($animales as $fila):?>
+              <td><?php echo $fila [0] ?></td>
+              <h2><a href="animal/<?=  $fila[0] ?>"<?=  $fila[3] ?>></a></h2>
+        
+                <p class="col-md-8 fs-4"> <?php echo  $fila [0]?></p>
+             <?php  endforeach ?> -->
+        
  
               </div>  
               </div>

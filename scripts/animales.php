@@ -1,5 +1,5 @@
 <?php
-require '../scripts/funciones.php';
+require 'funciones.php';
 
 if (! haIniciadoSesion() || ! esSuper() )
 {
@@ -13,7 +13,8 @@ conectar();
 
   //$animal = getANIMAL()
   //$cuidador = getnombrecuidador ();
-  $animales = gettodosANIMALES ()
+ $animales = gettodosANIMALES ()
+ //$animal = getANIMALESPorid ()
   //$cuidador = getCuidador();
   //$cuidador = getCuidador2();}
   
@@ -48,7 +49,7 @@ conectar();
             <tr>
               <td><?php echo $i++; ?></td>
               <td><?php echo $animal[1] ?></td>
-              <td><a href ="animales.php?animal=<?= $animal [1] ?>"><a href ="../super/editarAnimales.php?animal=<?= $animal [1] ?>">ver info</a></a></td>
+              <td><a href ="animales.php?animal=<?= $animal [0] ?>"><a href ="../super/editarAnimales.php?animal=<?= $animal [1] ?>">editar animal</a></a></td>
               
            </tr>
            <?php endforeach ?>
