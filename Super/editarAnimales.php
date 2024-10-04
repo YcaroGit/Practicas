@@ -15,7 +15,7 @@ else { header('Location: ../Admin.php');
 
 conectar();
 $animal =getANIMALESPorid ()
-//$animales = gettodosANIMALES();
+//$animal = gettodosANIMALES();
 //$animal = getANIMAL();
 //$gettodosANIMALES = gettodosANIMALES ();
 //$cuidador = getCuidador();
@@ -41,19 +41,19 @@ $animal =getANIMALESPorid ()
 
       <div class="form-group">
                 <label for="txtId">Id Animal</label>  
-                <input type="text" class="form-control" id="txtId" name="txtId" value="<?= $animal?>">
+                <input type="text"  id="txtId" name="txtId" value="<?= $nombreAnimal?>">
               </div>
               <div class="form-group">
                 <label for="txtId">Nombre</label>  
-                <input type="text" class="form-control" id="txtNombre" name="txtNombre" value="<?= $animal[1]?>">
+                <input type="text"  id="txtNombre" name="txtNombre" value="<?= $nombreAnimal?>">
               </div>
               <div class="form-group">
                 <label for="txtId">fechaNacimiento</label>  
-                <input type="text" class="form-control" id="txtFecha" name="txtFecha" value="<?= $animal[2]?>">
+                <input type="text"  id="txtFecha" name="txtFecha" value="<?= $nombreAnimal?>">
               </div>
               <div class="form-group">
                 <label for="txtId">genero</label>  
-                <input type="text" class="form-control" id="txtGenero" name="txtGenero" value="<?= $animal[3]?>">
+                <input type="text" class="form-control" id="txtGenero" name="txtGenero" value="<?= $nombreAnimal?>">
               </div>
               
             
@@ -63,9 +63,9 @@ $animal =getANIMALESPorid ()
               </div>   -->
 
        <?php foreach ($animal as $fila):?>
-        <td><?php echo $fila [1] ?></td>    
-         <h2><a href="ANIMALES<?=  $fila[1] ?>"<?=  $fila[2] ?>></a ></h2>
-          <p class="col-md-8 fs-4"> <?php echo  $fila [0]?></p>
+        <!-- <td><?php echo $fila [0] ?></td>     -->
+         <h2><a href="ANIMAL<?=  $fila[0] ?>"<?=  $fila[1] ?>></a ></h2>
+          <!-- <p class="col-md-8 fs-4"> <?php echo  $fila [0]?></p> -->
        <?php  endforeach ?>
 
 <!-- <?php foreach ($animales as $animal): ?>

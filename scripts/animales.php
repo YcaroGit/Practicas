@@ -7,9 +7,9 @@ if (! haIniciadoSesion() || ! esSuper() )
 }
 conectar();
 
-  //if(isset($_GET['animales']))
-   //$cuidador = $_GET['animales'];
-  //else  header('Location: index.html');
+  // if(isset($_GET['animales']))
+  // $animal = $_GET['animales'];
+  // else  header('Location: index.html');
 
   //$animal = getANIMAL()
   //$cuidador = getnombrecuidador ();
@@ -48,7 +48,7 @@ conectar();
             <tr>
               <td><?php echo $i++; ?></td>
               <td><?php echo $animal[1] ?></td>
-              <td><a href ="../super/animales.php?animal=<?= $animal [0] ?>"><a href ="../super/editarAnimales.php?animal=<?= $animal [0] ?>">ver info</a></a></td>
+              <td><a href ="animales.php?animal=<?= $animal [1] ?>"><a href ="../super/editarAnimales.php?animal=<?= $animal [1] ?>">ver info</a></a></td>
               
            </tr>
            <?php endforeach ?>

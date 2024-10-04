@@ -19,6 +19,7 @@
             conectar();
             
             editarAnimal ($id, $nombre, $fecha, $genero);
+            
 
             header('Location: ../Super/editarAnimales.php?animal='.$id);
 
