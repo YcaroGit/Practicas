@@ -51,7 +51,12 @@ INSERT INTO CUIDADOR (nombre, apellidos ,clave, email, telefono, Super) VALUES
 ('Ana', 'Ramos', '123' ,'anaramos@gmil.com', '654765567' ,'0'),
 ('Ezequiel', 'Garcia', '345', 'Ezemir@gmil.com', '876657775','0'),
 ('Super','Super', '000', 'Super@gmil.com', '000000000','1' ),
-('Leo', 'Vizue', '555' ,'leovizu@gmil.com', '662167560' ,'0');
+('Leo', 'Vizue', '555' ,'leovizu@gmil.com', '662167560' ,'0'),
+('marta', 'Gonzalez', '222' ,'martagon@gmil.com', '567948372' ,'0'),
+('veronica', 'Orza', '333' ,'Veroorz@gmil.com', '0908765387' ,'0'),
+('monica', 'Garcia', '444' ,'moniGar@gmil.com', '963186543' ,'0'),
+('paula', 'Martinez', '666' ,'pauMar@gmil.com', '676548876' ,'0'),
+('maria', 'Ramos', '777' ,'MariaRa@gmil.com', '009876578' ,'0');
 
 INSERT INTO HABITATS (nombre, descripcion, capacidad) VALUES 
 ('Rejas', 'solo para cuatro patas', 55),

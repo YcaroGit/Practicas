@@ -1,26 +1,25 @@
 <?php
 require '../scripts/funciones.php';
 
-if (! haIniciadoSesion() || ! esSuper() )
-{
+if (! haIniciadoSesion() || ! esSuper()) {
   header('Location: index.html');
 }
 //conectar();
 
-  if(isset($_GET['cuidador']))
-   $cuidador = $_GET['cuidador'];
-  else  header('Location: index.html');
+if (isset($_GET['cuidador']))
+  $cuidador = $_GET['cuidador'];
+else  header('Location: index.html');
 
-  conectar();
-  $cuidador = getnombrecuidador ();
-  $gettodosANIMALES = gettodosANIMALES ()
-  $animal = getANIMAL()
-  //$cuidador = getCuidador();
-  //$cuidador = getCuidador2();
-  
+conectar();
+//$cuidador = getnombrecuidador ();
+$gettodosANIMALES = gettodosANIMALES()
+//$animal = getANIMAL()
+//$cuidador = getCuidador();
+//$cuidador = getCuidador2();
+
 //$_GET['cuidador'] = getnombrecuidador();
 
-  //desconectar()
+//desconectar()
 ?>
 <?php include 'cuerpo.php';  ?>
 <?php include 'menu-izq.php';  ?>
